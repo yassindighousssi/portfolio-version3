@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yassine Dighoussi - Accessible Web Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="Main navigation">
+            <button id="menuToggle" aria-expanded="false" aria-controls="mainMenu" aria-label="Toggle navigation menu">
+                Menu
+            </button>
+            <ul id="mainMenu" role="menu">
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#youtube" role="menuitem">YouTube Channel</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="accessibility-controls" role="group" aria-label="Accessibility Controls">
+            <button id="darkModeToggle" aria-pressed="false" aria-label="Toggle dark mode">
+                Dark Mode
+            </button>
+            <div class="font-size-controls">
+                <button id="decreaseFont" aria-label="Decrease font size">A-</button>
+                <button id="resetFont" aria-label="Reset font size">A</button>
+                <button id="increaseFont" aria-label="Increase font size">A+</button>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        <section id="about" aria-labelledby="about-heading">
+            <h1 id="about-heading" tabindex="0">Yassine Dighoussi</h1>
+            <p tabindex="0">Full Stack Developer & Accessibility Specialist</p>
+            <p tabindex="0">I specialize in creating accessible web applications and teaching accessibility best practices. As a blind developer, I bring unique insights to web accessibility and user experience.</p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-heading">
+            <h2 id="skills-heading" tabindex="0">Technical Skills</h2>
+            <ul aria-label="List of technical skills">
+                <li tabindex="0">Full Stack Development: MongoDB, React, Node.js</li>
+                <li tabindex="0">Programming Languages: JavaScript, Python, HTML, CSS</li>
+                <li tabindex="0">Web Security & Networking</li>
+                <li tabindex="0">Accessibility Testing & Consulting</li>
+                <li tabindex="0">Development Tools: VS Code, Vim Editor</li>
+            </ul>
+        </section>
+
+        <section id="youtube" aria-labelledby="youtube-heading">
+            <h2 id="youtube-heading" tabindex="0">YouTube Channel: Geecks for Blind</h2>
+            <p tabindex="0">I share my knowledge through my YouTube channel where I teach:</p>
+            <ul aria-label="List of teaching topics">
+                <li tabindex="0">Web Development (HTML, CSS, JavaScript, Python)</li>
+                <li tabindex="0">Linux System Administration</li>
+                <li tabindex="0">Accessibility Design Principles</li>
+                <li tabindex="0">Assistive Technology Tutorials</li>
+                <li tabindex="0">Development Tools (VS Code, Vim)</li>
+            </ul>
+        </section>
+
+        <section id="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" tabindex="0">Contact Information</h2>
+            <ul aria-label="Contact details">
+                <li tabindex="0">
+                    <span aria-label="WhatsApp">WhatsApp:</span>
+                    <a href="https://wa.me/212665189795" aria-label="Contact me on WhatsApp">+212 665 189 795</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p tabindex="0">&copy; 2024 Yassine Dighoussi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
